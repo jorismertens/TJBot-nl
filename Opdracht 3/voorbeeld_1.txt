@@ -1,0 +1,138 @@
+[
+    {
+        "id": "981913a0.21d86",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a390140f.0c36d8",
+        "type": "ui_button",
+        "z": "981913a0.21d86",
+        "name": "",
+        "group": "aa564621.5e1ea8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "voorbeeld 1",
+        "payloadType": "str",
+        "topic": "",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "6ad849b1.8bb818"
+            ]
+        ]
+    },
+    {
+        "id": "70bee647.a895d8",
+        "type": "ui_button",
+        "z": "981913a0.21d86",
+        "name": "",
+        "group": "aa564621.5e1ea8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "voorbeeld 2",
+        "payloadType": "str",
+        "topic": "",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "6ad849b1.8bb818"
+            ]
+        ]
+    },
+    {
+        "id": "8215bea2.f435",
+        "type": "ui_button",
+        "z": "981913a0.21d86",
+        "name": "",
+        "group": "aa564621.5e1ea8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "voorbeeld 3",
+        "payloadType": "str",
+        "topic": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "6ad849b1.8bb818"
+            ]
+        ]
+    },
+    {
+        "id": "6ad849b1.8bb818",
+        "type": "ui_template",
+        "z": "981913a0.21d86",
+        "group": "1b110091.03e2af",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa564621.5e1ea8",
+        "type": "ui_group",
+        "z": "",
+        "name": "knoppen",
+        "tab": "291155f1.2c0a1a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1b110091.03e2af",
+        "type": "ui_group",
+        "z": "",
+        "name": "Uitkomst van knoppen",
+        "tab": "291155f1.2c0a1a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "291155f1.2c0a1a",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Voorbeeldwebsite",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
