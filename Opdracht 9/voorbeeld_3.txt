@@ -1,0 +1,177 @@
+[
+    {
+        "id": "36e972d6.7dc2be",
+        "type": "microPi",
+        "z": "bf94848e.0f1928",
+        "name": "microPi",
+        "filename": "/home/pi/audio/demo.wav",
+        "domain": "http://localhost:1880",
+        "rate": "16000",
+        "bitwidth": "16",
+        "endian": "little",
+        "encoding": "signed-integer",
+        "channels": "2",
+        "silence": "10",
+        "debug": true,
+        "mode": "666",
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "32b31e75.a031f2",
+                "b17cbe5a.cf9ee"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "32b31e75.a031f2",
+        "type": "watson-speech-to-text",
+        "z": "bf94848e.0f1928",
+        "name": "",
+        "alternatives": 1,
+        "speakerlabels": true,
+        "smartformatting": false,
+        "lang": "",
+        "langhidden": "",
+        "langcustom": "",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "",
+        "bandhidden": "",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "",
+        "payload-response": false,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "",
+        "x": 1080,
+        "y": 300,
+        "wires": [
+            [
+                "fe18ceff.dacf6"
+            ]
+        ]
+    },
+    {
+        "id": "e2cec0cd.f9bb2",
+        "type": "ui_button",
+        "z": "bf94848e.0f1928",
+        "name": "",
+        "group": "213d6ce9.efffa4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "stel een vraag",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            [
+                "36e972d6.7dc2be"
+            ]
+        ]
+    },
+    {
+        "id": "fe18ceff.dacf6",
+        "type": "watson-conversation-v1",
+        "z": "bf94848e.0f1928",
+        "name": "",
+        "workspaceid": "",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 1430,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b17cbe5a.cf9ee",
+        "type": "delay",
+        "z": "bf94848e.0f1928",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "a8855b79.ce4a38"
+            ]
+        ]
+    },
+    {
+        "id": "a8855b79.ce4a38",
+        "type": "change",
+        "z": "bf94848e.0f1928",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 180,
+        "wires": [
+            [
+                "36e972d6.7dc2be"
+            ]
+        ]
+    },
+    {
+        "id": "213d6ce9.efffa4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "724a676.5db9598",
+        "order": 2,
+        "disp": false,
+        "width": "15",
+        "collapse": false
+    },
+    {
+        "id": "724a676.5db9598",
+        "type": "ui_tab",
+        "z": "",
+        "name": "API connect to z/OS",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
